@@ -1,0 +1,24 @@
+# Server Properties
+server:
+  port: ${PORT:5050}
+
+# Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/socnet
+    username: postgres
+    password: password
+
+  # Hibernate Properties
+  # The SQL dialect makes Hibernate generate better SQL for the chosen database
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+# Hibernate Logging
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
